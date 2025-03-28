@@ -1,13 +1,5 @@
 version: 0.2
 
-env:
-  variables:
-    IMAGE_REPO_NAME: "test-coworking-anyalytics"  
-    IMAGE_TAG: "latest"
-    AWS_ACCOUNT_ID: "139409153367"
-    AWS_DEFAULT_REGION: "us-east-1"
- 
-
 
 phases:
   pre_build:
