@@ -11,7 +11,10 @@ WORKDIR /app
 COPY ./analytics/ /app
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r /app/requirements.txt
+RUN apt update -y
+RUN apt install build-essential libpq-dev -y
+RUN pip install --upgrade pip setuptools wheel
+RUN pip install -r requirements.txt
 
 # Make port 5153 available to the world outside this container
 EXPOSE 5153
